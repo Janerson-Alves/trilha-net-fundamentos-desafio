@@ -8,6 +8,7 @@ namespace DesafioFundamentos.Models
         //Atributos da classe
         private decimal precoInicial = 0;
         private decimal precoPorHora = 0;
+        // Lista de Strings.
         private List<string> veiculos = new List<string>();
 
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
@@ -19,7 +20,7 @@ namespace DesafioFundamentos.Models
         //Métodos da classe.
         public void AdicionarVeiculo()
         {
-            // TODO: Pedir para o usuário digitar uma placa e adicionar na lista "veiculos"
+            // TODO: Pedir para o usuário digitar uma placa e adicionar na lista "veículos".
             Console.WriteLine("Digite a placa do veículo para estacionar:");
             string placa = Console.ReadLine();
             //Adicionando na lista de veículos
@@ -28,7 +29,7 @@ namespace DesafioFundamentos.Models
 
         public void RemoverVeiculo()
         {
-            // Pedir para o usuário digitar a placa e armazenar na variável placa
+            // Pedir para o usuário digitar a placa e armazenar na variável placa.
             Console.WriteLine("Digite a placa do veículo para remover:");
             string placa = "";
             placa = Console.ReadLine();
@@ -36,12 +37,12 @@ namespace DesafioFundamentos.Models
             // Verifica se o veículo existe
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
             {
-                // Pedi para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado,
+                // Pedi para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado.
                 Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");              
                 int horas = 0;
                 horas = Convert.ToInt32(Console.ReadLine());
 
-                //Pedir para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado,
+                //Pedir para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado.
                 decimal valorTotal = 0;
                 valorTotal = precoInicial + precoPorHora * horas;
 
@@ -59,11 +60,11 @@ namespace DesafioFundamentos.Models
 
         public void ListarVeiculos()
         {
-            // Verifica se há veículos no estacionamento
+            // Verifica se há veículos no estacionamento.
             if (veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
-                // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
+                // TODO: Realizar um laço de repetição, exibindo os veículos estacionados.
                 // *IMPLEMENTE AQUI*
 
                 foreach(var item in veiculos)
